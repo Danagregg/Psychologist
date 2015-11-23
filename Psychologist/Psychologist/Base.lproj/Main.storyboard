@@ -31,7 +31,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mEn-HT-2A6" kind="showDetail" identifier="happy" id="f1y-La-eOy"/>
+                                    <segue destination="tO8-7P-3lq" kind="showDetail" identifier="happy" id="f1y-La-eOy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzm-Jp-HD1">
@@ -47,7 +47,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mEn-HT-2A6" kind="showDetail" identifier="sad" id="0Nk-zI-UPn"/>
+                                    <segue destination="tO8-7P-3lq" kind="showDetail" identifier="sad" id="0Nk-zI-UPn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V5-dh-99R">
@@ -63,7 +63,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mEn-HT-2A6" kind="showDetail" identifier="meh" id="hsR-Ip-hf0"/>
+                                    <segue destination="tO8-7P-3lq" kind="showDetail" identifier="meh" id="hsR-Ip-hf0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="crE-On-KgH">
@@ -84,11 +84,30 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-p6-TmT">
+                                <rect key="frame" x="256" y="379" width="89" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="AKH-B7-QaW"/>
+                                    <constraint firstAttribute="height" constant="40" id="QVu-LC-sES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Nothing"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AKH-B7-QaW"/>
+                                        <exclude reference="QVu-LC-sES"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpc-qn-rmR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mzs-3k-Pz9" firstAttribute="centerX" secondItem="7V5-dh-99R" secondAttribute="centerX" id="2tP-5o-6cW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mzs-3k-Pz9" secondAttribute="bottom" constant="276" id="4wN-2q-l6E"/>
+                            <constraint firstItem="nDX-p6-TmT" firstAttribute="centerX" secondItem="7V5-dh-99R" secondAttribute="centerX" id="6Ep-IY-8Bw"/>
                             <constraint firstItem="fzm-Jp-HD1" firstAttribute="centerX" secondItem="crE-On-KgH" secondAttribute="centerX" id="7Ez-0n-DAo"/>
                             <constraint firstItem="7V5-dh-99R" firstAttribute="top" secondItem="mzs-3k-Pz9" secondAttribute="bottom" constant="8" symbolic="YES" id="7wE-9a-lG7"/>
                             <constraint firstItem="crE-On-KgH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="96S-uY-ma9"/>
@@ -105,6 +124,7 @@
                             <constraint firstItem="crE-On-KgH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="cAT-Kc-g7x"/>
                             <constraint firstItem="crE-On-KgH" firstAttribute="centerX" secondItem="fzm-Jp-HD1" secondAttribute="centerX" id="efP-S5-DYQ"/>
                             <constraint firstItem="crE-On-KgH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i4u-Pf-x1T"/>
+                            <constraint firstItem="nDX-p6-TmT" firstAttribute="top" secondItem="7V5-dh-99R" secondAttribute="bottom" constant="8" symbolic="YES" id="ief-UG-BYc"/>
                             <constraint firstItem="crE-On-KgH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="k18-tg-euV"/>
                             <constraint firstItem="7V5-dh-99R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVL-Zv-eeF"/>
                             <constraint firstItem="crE-On-KgH" firstAttribute="centerX" secondItem="fzm-Jp-HD1" secondAttribute="centerX" id="wsd-w9-W6U"/>
@@ -131,10 +151,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="u4d-aG-gsV"/>
+                    <connections>
+                        <segue destination="tO8-7P-3lq" kind="showDetail" identifier="nothing" id="wOF-on-TQD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="79"/>
+            <point key="canvasLocation" x="1240" y="97"/>
         </scene>
         <!--Happiness View Controller-->
         <scene sceneID="97J-YN-Xva">
@@ -176,6 +199,7 @@
                             <constraint firstAttribute="trailing" secondItem="F7f-rd-eOu" secondAttribute="trailing" id="wu4-C4-PsS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tu2-lV-a8g"/>
                     <connections>
                         <outlet property="faceView" destination="F7f-rd-eOu" id="7XM-yf-Ydx"/>
                     </connections>
@@ -187,7 +211,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="666" y="845"/>
+            <point key="canvasLocation" x="1182" y="877"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nlv-X3-Bw5">
@@ -195,7 +219,7 @@
                 <splitViewController id="MhJ-bx-w1B" sceneMemberID="viewController">
                     <connections>
                         <segue destination="cME-Gd-vKS" kind="relationship" relationship="masterViewController" id="d2R-hb-sol"/>
-                        <segue destination="mEn-HT-2A6" kind="relationship" relationship="detailViewController" id="pQO-QR-tuC"/>
+                        <segue destination="tO8-7P-3lq" kind="relationship" relationship="detailViewController" id="pQO-QR-tuC"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WR-0p-3XW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,8 +244,26 @@
             </objects>
             <point key="canvasLocation" x="378" y="79"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F67-k6-riK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tO8-7P-3lq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EiK-Eb-aSp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mEn-HT-2A6" kind="relationship" relationship="rootViewController" id="toW-XI-eK9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puW-fg-P8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="857"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hsR-Ip-hf0"/>
+        <segue reference="wOF-on-TQD"/>
     </inferredMetricsTieBreakers>
 </document>
